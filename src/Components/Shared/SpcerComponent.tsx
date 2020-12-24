@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 
 /* Spacer component to give space between views or texts*/
