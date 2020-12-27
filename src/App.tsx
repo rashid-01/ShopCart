@@ -1,11 +1,10 @@
-import React from 'react';
-import ButtonComponent from './Components/Shared/ButtonComponent';
-import WelcomeScreen from './Screens/WelcomeScreen';
+import React, { useEffect } from 'react';
+import SplashScreen from 'react-native-splash-screen';
+import StackNavigator from './Navigations/Stacknavigator/StackNavigator';
 
-const App = () => {
+export default function App() {
+    
     return (
-        <WelcomeScreen/>
-    )
+       <StackNavigator/>
+   )
 }
-
-export default App;

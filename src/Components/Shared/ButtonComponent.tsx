@@ -5,7 +5,7 @@ const ButtonComponent = (props: any) => {
     const { fonts } = useTheme(); 
     return (
         //@ts-ignore
-        <Button mode="contained" raised style={props.style} labelStyle={{fontSize:props.fontSize}} onPress={()=>props.onclick} color={props.color}>{props.title}</Button>
+        <Button mode="contained" raised style={props.style} labelStyle={{fontSize:props.fontSize}} onPress={props.onclick} color={props.color}>{props.title}</Button>
     )
 }
 

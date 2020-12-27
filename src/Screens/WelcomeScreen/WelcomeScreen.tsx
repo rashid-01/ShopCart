@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import ButtonComponent from '../Components/Shared/ButtonComponent';
-import Spacer from '../Components/Shared/SpcerComponent';
-import { SwiperComponent } from '../Components/Shared/SwiperComponent';
-import { TextComponent } from '../Components/Shared/TextComponent';
-import { UnderlineComponent } from '../Components/Shared/UnderlineComponent';
+import ButtonComponent from '../../Components/Shared/ButtonComponent';
+import Spacer from '../../Components/Shared/SpcerComponent';
+import { SwiperComponent } from '../../Components/Shared/SwiperComponent';
+import { TextComponent } from '../../Components/Shared/TextComponent';
+import { UnderlineComponent } from '../../Components/Shared/UnderlineComponent';
+import useWelcomeScreen from './useWelcomeScreen';
 
-class WelcomeScreen extends Component{
-    //@ts-ignore
-    render() {
+function WelcomeScreen(props:any) {
+    const {navigateToLogin} = useWelcomeScreen(props)
+    //@ts-ignore 
         return (
             <View style={{flex:1, flexDirection:'column'}}>
                 <View style={{ flex: 5}}>
@@ -28,11 +29,10 @@ class WelcomeScreen extends Component{
                     </View>
                 </View>
                 <View style={{ flex: 1}}>
-                    <ButtonComponent color={'#00acec'} fontSize={20} style={{height:68, justifyContent:'center'}} title={'Getting Started'}/>
+                    <ButtonComponent color={'#00acec'} onclick={navigateToLogin} fontSize={20} style={{height:68, justifyContent:'center'}} title={'Getting Started'} />
                 </View>
             </View>
         )
     }
-}
 
 export default WelcomeScreen;
